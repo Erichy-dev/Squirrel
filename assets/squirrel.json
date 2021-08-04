@@ -1,0 +1,167 @@
+{
+	"textures": [
+		{
+			"image": "squirrel.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 983,
+				"h": 502
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "squirrel run-0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 339,
+						"h": 188
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 339,
+						"h": 188
+					},
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"w": 339,
+						"h": 188
+					}
+				},
+				{
+					"filename": "squirrel run-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 354,
+						"h": 233
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 354,
+						"h": 233
+					},
+					"frame": {
+						"x": 339,
+						"y": 0,
+						"w": 354,
+						"h": 233
+					}
+				},
+				{
+					"filename": "squirrel run-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 290,
+						"h": 156
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 290,
+						"h": 156
+					},
+					"frame": {
+						"x": 693,
+						"y": 0,
+						"w": 290,
+						"h": 156
+					}
+				},
+				{
+					"filename": "squirrel run-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 318,
+						"h": 127
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 318,
+						"h": 127
+					},
+					"frame": {
+						"x": 0,
+						"y": 233,
+						"w": 318,
+						"h": 127
+					}
+				},
+				{
+					"filename": "squirrel run-4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 322,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 322,
+						"h": 100
+					},
+					"frame": {
+						"x": 318,
+						"y": 233,
+						"w": 322,
+						"h": 100
+					}
+				},
+				{
+					"filename": "squirrel run-5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 311,
+						"h": 104
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 311,
+						"h": 104
+					},
+					"frame": {
+						"x": 640,
+						"y": 233,
+						"w": 311,
+						"h": 104
+					}
+				},
+				{
+					"filename": "squirrel run-6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 292,
+						"h": 142
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 292,
+						"h": 142
+					},
+					"frame": {
+						"x": 0,
+						"y": 360,
+						"w": 292,
+						"h": 142
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:bcfcfefa29828522d080aa871257d9ea:0b6b58bc0f6a02e9f82dc2b84ff1d737:78fd1ac9a53d02898bbcd8629e718170$"
+	}
+}
