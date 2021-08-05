@@ -1,3 +1,4 @@
+import { enemy } from "./enemy.js";
 class SceneA extends Phaser.Scene {
   constructor(){
     super('SceneA');
@@ -20,21 +21,12 @@ class SceneA extends Phaser.Scene {
       frameRate: 10,
     });
 
-    this.squirrel = this.add.sprite(120, 720, 'squirrel').setScale(0.5).setTint('black').play('squirrel-run');
+    this.squirrel = this.add.sprite(120, 720, 'squirrel').setScale(0.3).setTint('black').play('squirrel-run');
 
     this.squirrelPath = this.add.path();
 
-    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200);
+    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200, 150);
     this.squirrelPath.add(this.squirrelCirlcle);
-
-    // this.graphics = this.add.graphics({
-    //   lineStyle: {
-    //     width: 3,
-    //     color: 'blue',
-    //     alpha: 1
-    //   }
-    // });
-    // this.squirrelPath.draw(this.graphics);
 
     this.squirrel.pathFollower = this.plugins.get('rexpathfollowerplugin').add( this.squirrel, {
       path: this.squirrelPath,
@@ -46,10 +38,12 @@ class SceneA extends Phaser.Scene {
       targets: this.squirrel.pathFollower,
       t: 1,
       ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'
-      duration: 6000,
+      duration: 9000,
       repeat: -1,
       yoyo: false
     });
+
+    this.enemyScene = this.scene.add('enemy', enemy, "autoStart");
 
   }
   update (time, delta){

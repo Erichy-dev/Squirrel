@@ -1,0 +1,218 @@
+{
+	"textures": [
+		{
+			"image": "cheetah.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 501,
+				"h": 226
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "cheetah-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 230,
+						"h": 81
+					},
+						"y": 0,
+						"w": 166,
+						"h": 69
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 166,
+						"h": 69
+					},
+					"anchor": {
+						"x": 0.4826087,
+						"y": 0.45061728
+					}
+				},
+				{
+					"filename": "cheetah-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 230,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 7,
+						"w": 159,
+						"h": 68
+					},
+					"frame": {
+						"x": 169,
+						"y": 1,
+						"w": 159,
+						"h": 68
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "cheetah-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 230,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 12,
+						"w": 170,
+						"h": 66
+					},
+					"frame": {
+						"x": 330,
+						"y": 1,
+						"w": 170,
+						"h": 66
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "cheetah-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 230,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 18,
+						"w": 185,
+						"h": 47
+					},
+					"frame": {
+						"x": 1,
+						"y": 72,
+						"w": 185,
+						"h": 47
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "cheetah-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 230,
+						"h": 81
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 4,
+						"w": 189,
+						"h": 74
+					},
+					"frame": {
+						"x": 188,
+						"y": 72,
+						"w": 189,
+						"h": 74
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "cheetah-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 186,
+						"h": 85
+					},
+					"spriteSourceSize": {
+						"x": 16,
+						"y": 7,
+						"w": 170,
+						"h": 77
+					},
+					"frame": {
+						"x": 1,
+						"y": 148,
+						"w": 170,
+						"h": 77
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.54705882
+					}
+				},
+				{
+					"filename": "cheetah-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 186,
+						"h": 85
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 14,
+						"w": 165,
+						"h": 71
+					},
+					"frame": {
+						"x": 173,
+						"y": 148,
+						"w": 165,
+						"h": 71
+					},
+					"anchor": {
+						"x": 0.59139785,
+						"y": 0.55882353
+					}
+				},
+				{
+					"filename": "cheetah-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 186,
+						"h": 78
+					},
+					"spriteSourceSize": {
+						"x": 27,
+						"y": 17,
+						"w": 159,
+						"h": 61
+					},
+					"frame": {
+						"x": 340,
+						"y": 148,
+						"w": 159,
+						"h": 61
+					},
+					"anchor": {
+						"x": 0.69892473,
+						"y": 0.70512821
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:805e6d9923fea81a6de42e20c4526fc1:819932988848d11ee455892f85b33d65:28db3e85c21a54394d1b612cabfa4689$"
+	}
+}
