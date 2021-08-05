@@ -20,11 +20,11 @@ class SceneA extends Phaser.Scene {
       frameRate: 10,
     });
 
-    this.squirrel = this.add.sprite(120, 720, 'squirrel').setScale(0.7).setTint('black').play('squirrel-run');
+    this.squirrel = this.add.sprite(120, 720, 'squirrel').setScale(0.5).setTint('black').play('squirrel-run');
 
     this.squirrelPath = this.add.path();
 
-    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200, 100);
+    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200);
     this.squirrelPath.add(this.squirrelCirlcle);
 
     // this.graphics = this.add.graphics({

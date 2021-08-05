@@ -4,30 +4,156 @@
 			"image": "squirrel.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 648,
-				"h": 1913
+				"w": 646,
+				"h": 1911
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "squirrel2.png",
+					"filename": "squirrel run-0.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 646,
-						"h": 1911
+						"w": 528,
+						"h": 319
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 646,
-						"h": 1911
+						"w": 528,
+						"h": 319
 					},
 					"frame": {
 						"x": 1,
 						"y": 1,
-						"w": 646,
-						"h": 1911
+						"w": 528,
+						"h": 319
+					}
+				},
+				{
+					"filename": "squirrel run-1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 530,
+						"h": 320
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 530,
+						"h": 320
+					},
+					"frame": {
+						"x": 1,
+						"y": 322,
+						"w": 530,
+						"h": 320
+					}
+				},
+				{
+					"filename": "squirrel run-2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 580,
+						"h": 312
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 580,
+						"h": 312
+					},
+					"frame": {
+						"x": 1,
+						"y": 644,
+						"w": 580,
+						"h": 312
+					}
+				},
+				{
+					"filename": "squirrel run-3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 636,
+						"h": 254
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 636,
+						"h": 254
+					},
+					"frame": {
+						"x": 1,
+						"y": 958,
+						"w": 636,
+						"h": 254
+					}
+				},
+				{
+					"filename": "squirrel run-4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 644,
+						"h": 200
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 644,
+						"h": 200
+					},
+					"frame": {
+						"x": 1,
+						"y": 1214,
+						"w": 644,
+						"h": 200
+					}
+				},
+				{
+					"filename": "squirrel run-5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 622,
+						"h": 208
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 622,
+						"h": 208
+					},
+					"frame": {
+						"x": 1,
+						"y": 1416,
+						"w": 622,
+						"h": 208
+					}
+				},
+				{
+					"filename": "squirrel run-6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 584,
+						"h": 284
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 584,
+						"h": 284
+					},
+					"frame": {
+						"x": 1,
+						"y": 1626,
+						"w": 584,
+						"h": 284
 					}
 				}
 			]
@@ -36,6 +162,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:11bce2cc6b2cb7b461104296c55c430f:a82e534220f42fc1c1a996eae9b8913f:78fd1ac9a53d02898bbcd8629e718170$"
+		"smartupdate": "$TexturePacker:SmartUpdate:7b4e9c0e8ec779ffedfcad1e10529871:b4c13f0bd72d93e13e7ebe2e39ce23a4:78fd1ac9a53d02898bbcd8629e718170$"
 	}
 }
