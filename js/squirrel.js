@@ -24,7 +24,7 @@ class SceneA extends Phaser.Scene {
 
     this.squirrelPath = this.add.path();
 
-    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200, 200);
+    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200, 100);
     this.squirrelPath.add(this.squirrelCirlcle);
 
     // this.graphics = this.add.graphics({
