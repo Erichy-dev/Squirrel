@@ -1,4 +1,4 @@
-export class enemy extends Phaser.Scene{
+export class Enemy extends Phaser.Scene{
   constructor(){
     super();
   }
@@ -32,7 +32,7 @@ export class enemy extends Phaser.Scene{
       targets: this.cheetah.pathFollower,
       t: 1,
       ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'
-      duration: 6000,
+      duration: 3000,
       repeat: -1,
       yoyo: false
     });

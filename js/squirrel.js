@@ -1,8 +1,7 @@
-import { enemy } from "./enemy.js";
+import { Enemy , player, playerControls} from "../index.js";
 class SceneA extends Phaser.Scene {
   constructor(){
     super('SceneA');
-    this.angle = 0;
   }
   preload(){
     this.load.setPath('assets/');
@@ -13,41 +12,20 @@ class SceneA extends Phaser.Scene {
   create(){
     this.background = this.add.tileSprite(512, 384, 1024, 768, 'background');
 
+    this.cursors = this.input.keyboard.createCursorKeys();
+
+    player(this);
+
+    this.settedT = 0;
+    this.squirreSpeedRange = [5, 3, 8];
+
+    this.enemyScene = this.scene.add('enemy', Enemy, "autoStart");
     
-    this.anims.create({
-      key: 'squirrel-run',
-      frames: this.anims.generateFrameNames('squirrel'),
-      repeat: -1,
-      frameRate: 10,
-    });
-
-    this.squirrel = this.add.sprite(120, 720, 'squirrel').setScale(0.3).setTint('black').play('squirrel-run');
-
-    this.squirrelPath = this.add.path();
-
-    this.squirrelCirlcle = new Phaser.Curves.Ellipse(512, 250, 200, 150);
-    this.squirrelPath.add(this.squirrelCirlcle);
-
-    this.squirrel.pathFollower = this.plugins.get('rexpathfollowerplugin').add( this.squirrel, {
-      path: this.squirrelPath,
-      t: 0,
-      rotateToPath: true
-    });
-
-    this.tween = this.tweens.add({
-      targets: this.squirrel.pathFollower,
-      t: 1,
-      ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'
-      duration: 9000,
-      repeat: -1,
-      yoyo: false
-    });
-
-    this.enemyScene = this.scene.add('enemy', enemy, "autoStart");
-
   }
   update (time, delta){
-    this.background.tilePositionX += 2;
+    this.background.tilePositionX += 3;
+
+    playerControls(this, delta);
   }
 }
 
