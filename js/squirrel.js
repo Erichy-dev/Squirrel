@@ -35,7 +35,7 @@ const config = {
   banner: {
     hidePhaser: true
   },
-  url:'should be ready soon',
+  url:'https://erichy-dev.github.io/Squirrel/',
   title: 'Squirrel',
   type: Phaser.AUTO,
   physics: {
