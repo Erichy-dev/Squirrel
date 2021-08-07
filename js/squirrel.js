@@ -1,9 +1,11 @@
-import { Enemy , player, playerControls} from "../index.js";
+import { enemy , player, playerControls } from "../index.js";
 class SceneA extends Phaser.Scene {
   constructor(){
     super('SceneA');
   }
   preload(){
+    this.load.atlas('cheetah', 'assets/enemy/cheetah.png', 'assets/enemy/cheetah.json');
+
     this.load.setPath('assets/');
     this.load.image('background');
     this.load.atlas('squirrel');
@@ -15,12 +17,12 @@ class SceneA extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
 
     player(this);
-
+    
     this.settedT = 0;
     this.squirreSpeedRange = [5, 3, 8];
-
-    this.enemyScene = this.scene.add('enemy', Enemy, "autoStart");
     
+    enemy(this);
+
   }
   update (time, delta){
     this.background.tilePositionX += 3;
@@ -36,6 +38,12 @@ const config = {
   url:'should be ready soon',
   title: 'Squirrel',
   type: Phaser.AUTO,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      debug: false,
+    }
+  },
   pixelArt: true,
   scale: {
     mode: Phaser.Scale.FIT,
