@@ -1,17 +1,31 @@
-import { enemy , player, playerControls } from "../index.js";
+import { enemy , player, playerControls, StartScene } from "../index.js";
 class SceneA extends Phaser.Scene {
   constructor(){
     super('SceneA');
   }
   preload(){
-    this.load.atlas('cheetah', 'assets/enemy/cheetah.png', 'assets/enemy/cheetah.json');
-
+    
     this.load.setPath('assets/');
+    this.load.audio('red-moon', 'AudioFile/red-moon.mp3');
+    this.load.atlas('cheetah', 'enemy/cheetah.png', 'enemy/cheetah.json');
     this.load.image('background');
     this.load.atlas('squirrel');
     this.load.plugin('rexpathfollowerplugin', 'rexpathfollowerplugin.min.js', true);
   }
   create(){
+    let musicConfig = {
+      mute: false,
+      volume: 0.5,
+      rate: 1,
+      detune: 0,
+      seek: 0,
+      loop: true,
+      delay: 0,
+    };
+
+    this.music = this.sound.add('red-moon', musicConfig);
+    this.music.play();
+
     this.background = this.add.tileSprite(512, 384, 1024, 768, 'background');
 
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -34,24 +48,30 @@ class SceneA extends Phaser.Scene {
   }
 }
 
-const config = {
-  banner: {
-    hidePhaser: true
-  },
-  url:'https://erichy-dev.github.io/Squirrel/',
-  title: 'Squirrel',
-  type: Phaser.AUTO,
-  physics: {
-    default: 'arcade',
-    arcade: {
-      debug: false,
-    }
-  },
-  pixelArt: true,
-  scale: {
-    mode: Phaser.Scale.FIT,
-    parent: 'phaser-example'
-  },
-  scene:[ SceneA ]
+window.onload = function (){
+  const config = {
+    audio: {
+      disableWebAudio: false
+    },
+    banner: {
+      hidePhaser: true
+    },
+    url:'should be ready soon',
+    title: 'Squirrel',
+    type: Phaser.AUTO,
+    physics: {
+      default: 'arcade',
+      arcade: {
+        debug: false,
+      }
+    },
+    pixelArt: true,
+    scale: {
+      mode: Phaser.Scale.FIT,
+      parent: 'phaser-example'
+    },
+    scene:[ StartScene, SceneA ]
+  };
+  const game = new Phaser.Game(config);
+  window.focus();
 };
-const game = new Phaser.Game(config);

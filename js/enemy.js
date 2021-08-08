@@ -1,5 +1,5 @@
 export async function enemy(scene){
-  await new Promise(resolve => {setTimeout(() => resolve(), 6000)});
+  await new Promise(resolve => {setTimeout(() => resolve(), 9000)});
     scene.anims.create({
       key: 'cheetah-run',
       frames: scene.anims.generateFrameNames('cheetah'),
@@ -24,7 +24,7 @@ export async function enemy(scene){
     scene.tween = scene.tweens.add({
       targets: scene.cheetah.pathFollower,
       t: 1,
-      ease: 'Linear', //'Cubic', 'Elastic', 'Bounce', 'Back'
+      ease: 'Linear',
       duration: 3000,
       repeat: -1,
       yoyo: false
