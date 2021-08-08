@@ -39,7 +39,7 @@ export class StartScene extends Phaser.Scene{
       key: 'squirrel-run',
       frames: this.anims.generateFrameNames('squirrel'),
       repeat: -1,
-      frameRate: 7,
+      frameRate: 21,
     });
 
     this.squirrel = this.add.sprite(500, 670, 'squirrel').setScale(0.7).setTint('0xff01234').play('squirrel-run');
