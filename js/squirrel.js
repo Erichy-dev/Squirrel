@@ -23,8 +23,8 @@ class SceneA extends Phaser.Scene {
       delay: 0,
     };
 
-    this.music = this.sound.add('red-moon', musicConfig);
-    this.music.play();
+    this.musicA = this.sound.add('red-moon', musicConfig);
+    this.musicA.play();
 
     this.background = this.add.tileSprite(512, 384, 1024, 768, 'background');
 

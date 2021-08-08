@@ -41,18 +41,19 @@ export class StartScene extends Phaser.Scene{
       repeat: -1,
       frameRate: 7,
     });
-    
-    this.squirrel = this.add.sprite(500, 700, 'squirrel').setScale(0.7).setTint('0xff01234').play('squirrel-run');
+
+    this.squirrel = this.add.sprite(500, 670, 'squirrel').setScale(0.7).setTint('0xff01234').play('squirrel-run');
 
     startSceneBackground(this);
 
     this.add.text(50, 50, 'Click anywhere to start').setScale(3).setTint('0xff01234');
-    this.add.text(100, 100, 'up to increase speed\ndown to decrease').setScale(2).setTint('0xff01234');
+    this.add.text(100, 100, 'up to increase speed\ndown to decrease').setScale(2).setTint('0xff01255');
+    this.add.text(100, 100, 'Make sure he doesnt get caught').setScale(1.5).setTint('0xff3955');
 
     this.input.on('pointerdown', function (){
-      this.scene.launch('SceneA');
-      this.music.pause();
+      this.music.stop();
       this.scene.stop('Start');
+      this.scene.launch('SceneA');
     }, this);
   }
 };

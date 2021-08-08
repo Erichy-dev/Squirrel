@@ -33,7 +33,9 @@ export async function enemy(scene){
     scene.physics.world.enable([scene.squirrel, scene.cheetah], 0);
     scene.physics.add.collider(scene.squirrel, scene.cheetah, collidercallback, null, scene);
 
-    function collidercallback (squirrel, cheetah){
+   function collidercallback (squirrel, cheetah){
+      scene.musicA.pause();
       scene.scene.pause('SceneA');
+      scene.add.text(100, 100, 'you just killed my squirrel').setScale(2).setTint(0xff0012);
     }
 };
