@@ -46,9 +46,9 @@ export class StartScene extends Phaser.Scene{
 
     startSceneBackground(this);
 
-    this.add.text(50, 50, 'Click anywhere to start').setScale(3).setTint('0xff01234');
-    this.add.text(100, 100, 'up to increase speed\ndown to decrease').setScale(2).setTint('0xff01255');
-    this.add.text(100, 100, 'Make sure he doesnt get caught').setScale(1.5).setTint('0xff3955');
+    this.add.text(50, 50, 'Click anywhere to start').setScale(1.5).setTint('black');
+    this.add.text(50, 80, 'up to increase speed\ndown to decrease').setScale(1.8).setTint('black');
+    this.add.text(50, 130, 'Make sure he does not get caught').setScale(1.5).setTint('black');
 
     this.input.on('pointerdown', function (){
       this.music.stop();
