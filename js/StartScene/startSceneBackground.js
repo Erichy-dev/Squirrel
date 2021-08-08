@@ -1,5 +1,5 @@
 export function startSceneBackground(startScene){
-  startScene.add.image(512, 384, 'background').setAlpha(0.7);
+  startScene.add.image(512, 384, 'backgroundd').setAlpha(0.7);
 
   let clouds = startScene.add.image(1024, 32, 'clouds').setOrigin(0);
 

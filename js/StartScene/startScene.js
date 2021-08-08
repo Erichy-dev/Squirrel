@@ -14,7 +14,7 @@ export class StartScene extends Phaser.Scene{
     this.load.setPath('../assets/StartScene/');
     this.load.image('light', 'light.png');
     this.load.atlas('candle');
-    this.load.image('background');
+    this.load.image('backgroundd', 'backgroundd.png');
     this.load.image('clouds');
     this.load.image('fog');
     this.load.image('overlay');
