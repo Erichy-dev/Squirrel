@@ -6,7 +6,6 @@ export class StartScene extends Phaser.Scene{
   }
   preload(){
     this.load.atlas('squirrel', '../assets/squirrel.png', '../assets/squirrel.json');
-    this.load.plugin('rexpathfollowerplugin', '../assets/rexpathfollowerplugin.min.js', true);
 
     this.load.setPath('../assets/AudioFile/');
     this.load.audio('hip-latin', 'hip-latin-jazz.mp3');
@@ -22,6 +21,7 @@ export class StartScene extends Phaser.Scene{
     this.load.image('tombsNormalMap', 'tombs_n.png');
   }
   create(){
+    console.log(this.physics.add.collider());
     let musicConfig = {
       mute: false,
       volume: 0.2,
@@ -52,8 +52,8 @@ export class StartScene extends Phaser.Scene{
 
     this.input.on('pointerdown', function (){
       this.music.stop();
-      this.scene.stop('Start');
-      this.scene.launch('SceneA');
+      this.scene.sleep();
+      this.scene.launch('SceneA')
     }, this);
   }
 };

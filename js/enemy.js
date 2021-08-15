@@ -33,9 +33,12 @@ export async function enemy(scene){
     scene.physics.world.enable([scene.squirrel, scene.cheetah], 0);
     scene.physics.add.collider(scene.squirrel, scene.cheetah, collidercallback, null, scene);
 
-   function collidercallback (squirrel, cheetah){
-      scene.musicA.pause();
-      scene.scene.pause('SceneA');
+    async function collidercallback (squirrel, cheetah){
       scene.add.text(100, 100, 'R.I.P').setScale(2).setTint(0xff0012);
+      scene.scene.pause();
+      await new Promise (resolve=>{setTimeout(()=> {resolve()}, 3000)});
+      scene.musicA.stop();
+      scene.scene.stop('SceneA');
+      scene.scene.wake('Start');
     }
 };
