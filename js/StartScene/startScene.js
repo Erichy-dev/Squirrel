@@ -47,9 +47,8 @@ export class StartScene extends Phaser.Scene{
     this.add.text(50, 130, 'Make sure he does not get caught').setScale(1.5).setTint('black');
 
     this.input.on('pointerdown', function (){
-      this.music.stop();
       this.scene.sleep();
-      this.scene.launch('SceneA')
+      this.scene.launch('SceneA');
     }, this);
   }
 };

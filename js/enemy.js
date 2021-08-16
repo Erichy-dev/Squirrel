@@ -37,7 +37,7 @@ export async function enemy(scene){
       scene.add.text(100, 100, 'R.I.P').setScale(2).setTint(0xff0012);
       scene.scene.pause();
       await new Promise (resolve=>{setTimeout(()=> {resolve()}, 3000)});
-      scene.musicA.stop();
+      scene.sound.stopAll();
       let musicConfig = {
         mute: false,
         volume: 0.2,

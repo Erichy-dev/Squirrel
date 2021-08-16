@@ -13,14 +13,12 @@ class SceneA extends Phaser.Scene {
     this.load.plugin('rexpathfollowerplugin', 'rexpathfollowerplugin.min.js', true);
   }
   create(){
+    this.sound.stopAll();
     let musicConfig = {
       mute: false,
       volume: 0.5,
       rate: 1,
-      detune: 0,
-      seek: 0,
       loop: true,
-      delay: 0,
     };
 
     this.musicA = this.sound.add('red-moon', musicConfig);
