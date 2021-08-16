@@ -33,8 +33,8 @@ class SceneA extends Phaser.Scene {
     player(this);
     
     this.settedT = 0;
-    this.squirreSpeedRange = [5, 2.5, 8];//you can embelish the squirrel's speed to your liking.
-    //[0] => optimal speed
+    this.squirreSpeedRange = [5, 2, 8];//you can embelish the squirrel's speed to your liking.
+    //[5] => optimal speed
     //[2.5] => accelerated speed
     //[8] => deccelerated speed
     

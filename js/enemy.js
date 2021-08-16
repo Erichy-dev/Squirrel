@@ -38,6 +38,16 @@ export async function enemy(scene){
       scene.scene.pause();
       await new Promise (resolve=>{setTimeout(()=> {resolve()}, 3000)});
       scene.musicA.stop();
+      let musicConfig = {
+        mute: false,
+        volume: 0.2,
+        rate: 1,
+        loop: true,
+      };
+  
+      scene.startSMusic = this.sound.add('hip-latin', musicConfig);
+      scene.startSMusic.play(musicConfig);
+  
       scene.scene.stop('SceneA');
       scene.scene.wake('Start');
     }

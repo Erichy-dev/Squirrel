@@ -21,15 +21,11 @@ export class StartScene extends Phaser.Scene{
     this.load.image('tombsNormalMap', 'tombs_n.png');
   }
   create(){
-    console.log(this.physics.add.collider());
     let musicConfig = {
       mute: false,
       volume: 0.2,
       rate: 1,
-      detune: 0,
-      seek: 0,
       loop: true,
-      delay: 0,
     };
 
     this.music = this.sound.add('hip-latin', musicConfig);
