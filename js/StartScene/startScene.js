@@ -1,24 +1,9 @@
 import { startSceneBackground } from "./startSceneBackground.js";
 
+let button, musicSetting, musicOff = false;
 export class StartScene extends Phaser.Scene{
   constructor(){
     super('Start');
-  }
-  preload(){
-    this.load.atlas('squirrel', '../assets/squirrel.png', '../assets/squirrel.json');
-
-    this.load.setPath('../assets/AudioFile/');
-    this.load.audio('hip-latin', 'hip-latin-jazz.mp3');
-
-    this.load.setPath('../assets/StartScene/');
-    this.load.image('light', 'light.png');
-    this.load.atlas('candle');
-    this.load.image('backgroundd', 'backgroundd.png');
-    this.load.image('clouds');
-    this.load.image('fog');
-    this.load.image('overlay');
-    this.load.image('tombs', ['tombs.png', 'tombs_n.png']);
-    this.load.image('tombsNormalMap', 'tombs_n.png');
   }
   create(){
     let musicConfig = {
@@ -42,13 +27,39 @@ export class StartScene extends Phaser.Scene{
 
     startSceneBackground(this);
 
-    this.add.text(50, 50, 'Click anywhere to start').setScale(1.5).setTint('black');
-    this.add.text(50, 80, 'up to increase speed\ndown to decrease').setScale(1.8).setTint('black');
-    this.add.text(50, 130, 'Make sure he does not get caught').setScale(1.5).setTint('black');
+    button = this.make.image({
+      key: 'button', 
+      x: 700, 
+      y: 100,
+      alpha: 0.5
+    }).setInteractive();
+    musicSetting = this.add.bitmapText(600, 80, 'ice', 'MUSIC', 50);
 
-    this.input.on('pointerdown', function (){
-      this.scene.sleep();
-      this.scene.launch('SceneA');
-    }, this);
+    musicOff? musicSetting.setText('musicoff'): musicSetting.setText('MUSIC');
+    button.on('pointerup', () =>{
+      if(!musicOff){
+        musicSetting.setText('musicoff');
+        this.sound.setMute(true);
+        musicOff = true;
+      }else {
+        this.sound.setMute(false);
+        musicOff = false;
+        musicSetting.setText('MUSIC');
+      }
+    });
+
+    let startButt = this.make.image({
+      x:800,
+      y:400,
+      alpha: 0.5,
+      key:'start',
+    }).setInteractive();
+
+    let startText = this.add.dynamicBitmapText(740, 380, 'ice', 'PLAY', 50).setTint('0xff2299');
+
+    startButt.on('pointerup', () => {
+      this.scene.start('SceneA');
+    });
+
   }
 };

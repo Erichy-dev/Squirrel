@@ -1,5 +1,5 @@
 export async function enemy(scene){
-  await new Promise(resolve => {setTimeout(() => resolve(), 9000)});
+  await new Promise(resolve => {setTimeout(() => resolve(), 11000)});
     scene.anims.create({
       key: 'cheetah-run',
       frames: scene.anims.generateFrameNames('cheetah'),
@@ -48,7 +48,6 @@ export async function enemy(scene){
       scene.startSMusic = this.sound.add('hip-latin', musicConfig);
       scene.startSMusic.play(musicConfig);
   
-      scene.scene.stop('SceneA');
-      scene.scene.wake('Start');
+      scene.scene.start('Start');
     }
 };
