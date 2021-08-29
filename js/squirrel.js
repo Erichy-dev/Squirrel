@@ -58,6 +58,7 @@ window.onload = function (){
     pixelArt: true,
     scale: {
       mode: Phaser.Scale.FIT,
+      autocenter: Phaser.Scale.CENTER_BOTH,
       parent: 'phaser-example'
     },
     scene:[ Preloader, StartScene, SceneA ]
